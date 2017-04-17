@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeList {
 
 	public List<Employee> employeeList = new ArrayList<Employee>();
-	public List<Employee> employeeListFilter = new ArrayList<Employee>();
+	public List<Employee> employeeListFilterbyGender = new ArrayList<Employee>();
 	public EmployeeList() {
 		this.employeeList.add(new Employee("Jamaluddin", "Male"));
 		this.employeeList.add(new Employee("Jamal", "Male"));
@@ -20,8 +20,8 @@ public class EmployeeList {
 	@RequestMapping(value = "/employees", method = RequestMethod.GET)
 	public List<Employee> getEmployee(@RequestParam(value = "gender", defaultValue = "not Yet") String gender) {
 		if (gender.equals("male")) {
-			employeeListFilter = employeeList.stream().filter(s -> s.getGender().toLowerCase().equals("male")).collect(Collectors.toList());
-			return employeeListFilter;
+			employeeListFilterbyGender = employeeList.stream().filter(s -> s.getGender().toLowerCase().equals("male")).collect(Collectors.toList());
+			return employeeListFilterbyGender;
 		} else {
 			return employeeList;
 		}

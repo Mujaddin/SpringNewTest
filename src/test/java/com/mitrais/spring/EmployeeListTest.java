@@ -24,9 +24,7 @@ public class EmployeeListTest {
 	@Before
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.standaloneSetup(new EmployeeList()).build();
-		this.employeeList.add(new Employee("Jamaluddin", "Male"));
-		this.employeeList.add(new Employee("Jamal", "Male"));
-		this.employeeList.add(new Employee("Andy", "Male"));
+		
 	}
 
 	@Test
