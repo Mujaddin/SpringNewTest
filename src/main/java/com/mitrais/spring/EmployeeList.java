@@ -29,6 +29,7 @@ public class EmployeeList {
 
 	@RequestMapping(value = "/employees", method = RequestMethod.POST)
 	public Employee EmployeeGet(@RequestBody Employee message) {
+		this.employeeList.add(message);
 		return message;
 	}
 

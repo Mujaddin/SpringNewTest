@@ -31,7 +31,7 @@ public class SpringIoApplication {
 	@Bean
 	 CommandLineRunner printMessage(HelloWorld component) {
         return args -> {
-            component.setMessage("hello component");
+            component.setMessage("hello component, running server done");
             component.printMessage();
         };
     }

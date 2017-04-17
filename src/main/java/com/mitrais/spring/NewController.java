@@ -10,7 +10,7 @@ public class NewController {
 	    @RequestMapping("/hello")
 	    @ResponseBody
 	    public String hello() {
-	        return "Greetings from Spring Boot!";
+	        return "Greetings from Spring Boot Yay!";
 	    }
 	
 }

@@ -9,6 +9,18 @@ public class Employee {
 		this.gender = gender;
 	}
 
+	public Employee() {
+
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -16,5 +28,5 @@ public class Employee {
 	public String getGender() {
 		return gender;
 	}
-	
+
 }
